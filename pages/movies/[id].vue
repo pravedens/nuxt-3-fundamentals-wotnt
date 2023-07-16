@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute();
-const { data } = useAsyncData(() => {
+const { data } = await useAsyncData(() => {
   return $fetch(`http://www.omdbapi.com/?apikey=8e3f600b&i=${route.params.id}`);
 });
 </script>
